@@ -1,0 +1,82 @@
+
+<html>
+<body>
+
+<h2>JavaScript switch</h2>
+
+<div class="content">
+<div class="row">
+<div class="col">
+<label>Value A</label>
+<input type="text" id="myText1" placeholder="X" name="Value A">
+</div>
+<div class="col">
+<label>Value B</label>
+<input type="text" id="myText2" placeholder="Y" name="Value B">
+</div>
+<div class="col">
+<label>opretar</label>
+<input type="text" id="myText3" placeholder="=" name="opretar">
+</div>
+</div>
+</div>
+<p id="demo"></p>
+
+
+<button onclick="myFunction()">PRESS</button>
+
+
+<p id="demo"></p>
+
+<script>
+
+
+
+function myFunction() {
+
+let calculator;
+var ValueA=document.getElementById("myText1").value;
+var ValueB=document.getElementById("myText2").value;
+var opretar=document.getElementById("myText3").value;
+switch (opretar) {
+  case '/':
+  
+alert(parseInt(ValueA) / parseInt(ValueB))
+document.getElementById("demo").innerHTML = parseInt(ValueA) / parseInt(ValueB);
+
+ 
+    break;
+  case  '*':
+ 
+alert(parseInt(ValueA) * parseInt(ValueB))
+document.getElementById("demo").innerHTML = parseInt(ValueA) * parseInt(ValueB);
+
+
+    break;
+  case '+':
+ 
+alert(parseInt(ValueA) + parseInt(ValueB))
+document.getElementById("demo").innerHTML = parseInt(ValueA) + parseInt(ValueB);
+
+ 
+
+    break;
+  case  '-':
+  
+alert(parseInt(ValueA) - parseInt(ValueB))
+document.getElementById("demo").innerHTML = parseInt(ValueA) - parseInt(ValueB);
+
+
+    break;
+  
+}
+
+ }
+ 
+ 
+ 
+ </script>
+
+</body>
+</html>
+
