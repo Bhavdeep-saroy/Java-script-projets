@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+	<style>
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.hero-image {
+  background-image: url("img/images007.jpg");
+  background-color: #cccccc;
+  height: 500px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+.hero-text {
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+}
+</style>
+</head>
+<body class="hero-image" class="hero-text" >
+
+<div class="container" style="margin-left:544px;margin-top:100px;">
+<label><i class="fa-solid fa-user"></i>&emsp;User name</label><br>
+<input type="" id="pop" placeholder="name" name="">
+<p id="popo"></p>
+
+<label><i class="fa-solid fa-envelope"></i>&emsp;Email</label><br>
+<input type="" id="pop1" placeholder="email" name="">
+<p id="popo1"></p>
+
+<label><i class="fa-solid fa-lock"></i>&emsp;Password</label><br>
+<input type="password" id="pop2" placeholder="********" name="">
+<p id="popo2"></p>
+
+<label><i class="fa-solid fa-phone"></i>&emsp;Phone Number</label><br>
+<input type="" id="pop3" placeholder="" name="">
+<p id="popo3"></p>
+
+<label><i class="fa-solid fa-house"></i>&emsp;Address</label><br>
+<input type="" id="pop4" placeholder="" name="">
+<p id="popo4"></p>
+
+<button onclick="myFunction()">press</button>
+
+
+</div>
+
+</body>
+<script type="text/javascript">
+function myFunction(){
+
+
+document.getElementById("popo").style.color = "#ff0000";
+document.getElementById("popo1").style.color = "#ff0000";
+document.getElementById("popo2").style.color = "#ff0000";
+document.getElementById("popo3").style.color = "#ff0000";
+document.getElementById("popo4").style.color = "#ff0000";
+
+
+
+var pop=document.getElementById('pop').value;
+if (pop.length > 10){
+document.getElementById('popo').innerHTML="Please enter olny ten digites";
+}else{
+document.getElementById('popo').innerHTML="";
+if (pop.length < 5){
+document.getElementById('popo').innerHTML="Please enter macximes 5 digites";
+}else{
+document.getElementById('popo').innerHTML="";
+}
+}
+
+
+var pop1=document.getElementById('pop1').value;
+if (pop1=="") {
+document.getElementById('popo1').innerHTML="Please enter your email address";
+}else{
+if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(pop1)){
+document.getElementById('popo1').innerHTML="";
+}else{
+document.getElementById('popo1').innerHTML="Please enter valid email address";
+}
+}
+
+
+var pop2=document.getElementById('pop2').value;
+if (pop2.length < 8){
+document.getElementById('popo2').innerHTML="Please enter macximems 8 digites";
+}else{
+document.getElementById('popo2').innerHTML="";
+}
+
+
+var pop3=document.getElementById('pop3').value;
+if (isNaN(pop3)){
+document.getElementById('popo3').innerHTML="Please enter olny digites";
+}else{
+document.getElementById('popo3').innerHTML="";
+if (pop3.length > 10){
+document.getElementById('popo3').innerHTML="Please enter ten digites only";
+}else{
+document.getElementById('popo3').innerHTML="";
+if (pop3.length < 10){
+document.getElementById('popo3').innerHTML="Please enter macximems ten digites";
+}else{
+document.getElementById('popo3').innerHTML="";
+}
+}
+}
+
+var pop4=document.getElementById('pop4').value;
+
+if (pop4==""){
+document.getElementById('popo4').innerHTML="Please enter email address";
+}else{document.getElementById('popo4').innerHTML="";}
+
+
+
+
+
+}
+</script>
+</html>
