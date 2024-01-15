@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+</head>
+<body>
+
+<p id="Loop_print"></p>
+
+<p id="Loop_printt"></p>
+
+<p id="Loop_printtt"></p>
+
+
+<button onclick="myFunction()">Try it</button>
+
+<script>
+function myFunction() {
+  var output = ""; // Initialize an empty string to store the concatenated output
+
+  // Loop 1
+  for (var a = 1; a <= 5; a++) {
+    for (var b = 1; b <= a; b++) {
+      output += b + " "; // Concatenate the value of 'b' with a space
+    }
+    output += "<br>"; // Add a line break after each inner loop completes
+  }
+
+  document.getElementById('Loop_print').innerHTML = output; // Display the final concatenated output
+
+  // Loop 2
+  output = ""; // Reset the output for the next loop
+  for (var a = 1; a <= 5; a++) {
+    for (var b = 1; b <= a; b++) {
+      output += a + " "; // Concatenate the value of 'a' with a space
+    }
+    output += "<br>"; // Add a line break after each inner loop completes
+  }
+
+  document.getElementById('Loop_printt').innerHTML = output; // Display the final concatenated output
+
+  // Loop 3
+  output = ""; // Reset the output for the next loop
+  for (var a = 5; a >= 1; a--) {
+    for (var b = 1; b <= a; b++) {
+      output += a + " "; // Concatenate the value of 'a' with a space
+    }
+    output += "<br>"; // Add a line break after each inner loop completes
+  }
+
+  document.getElementById('Loop_printtt').innerHTML = output; // Display the final concatenated output
+}
+</script>
+
+</body>
+</html>
