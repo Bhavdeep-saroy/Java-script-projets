@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <title></title>
+<style type="text/css">
+
+input:hover {
+  background-color: #CACFD2;
+}
+.city:hover {
+  background-color: #979A9A;
+  color: #F4F6F7 ;
+  border-color: #A04000 ;
+      margin-left: 240px;
+    margin-right: 240px;
+    border-radius: 10px;
+}
+label:hover {
+  background-color:black;
+  color: #CACFD2;
+}
+p:hover {
+  background-color:black;
+  color: #CACFD2;
+}
+</style>
+
+</head>
+<body>
+<input type="text" id="answ" value="">
+
+<div style="border-radius: 4%;background-color: #CACFD2 ;margin-left: 400px;margin-right: 400px;height: 340px;">
+  <input type="text" id="Question" value="0" style="width:30px;">
+
+ <h1 id="hey" style="text-align: center;"></h1><br>
+ <div style="text-align: center; margin-left: -12px;">
+<input type="radio" onchange="myFunction('option11')"  name="option" id="option11" value="a">
+<label id="option1"></label>
+ </div><br>
+<div style="text-align: center;">
+<input type="radio" name="option" onchange="myFunction('option22')" id="option22" value="b">
+<label  id="option2"></label>
+ </div><br>
+<div style="text-align: center; margin-left: -10px;">
+<input type="radio" onchange="myFunction('option33')"  name="option" id="option33" value="c">
+<label id="option3"></label>
+ </div><br>
+<div style="text-align: center;">
+<input type="radio" onchange="myFunction('option44')"name="option" id="option44" value="d">
+<label id="option4"></label>
+ </div><br>
+</div><br><br>
+
+
+
+
+
+<div style="border-radius: 2%;margin-right: 400px;background-color:#34495E;color: whitesmoke;margin-left: 400px;height: 170px;text-align: center;"><br>
+<p style="background-color: #000;color: #fff;border-radius: 10px;margin-right: 245px;margin-left: 245px;">result</p>
+<div id="by" class="city"  ></div>
+</div>
+
+
+
+
+
+</body>
+
+<script type="text/javascript">
+const hello=[ 
+    {
+        quo:'two pluse two ?', 
+        optionA:'four', 
+        optionB:'nine',
+        optionC:'sevan',
+        optionD:'six',
+
+        answer: 'four'
+
+    },{
+        quo:'three pluse three ?',
+         optionA:'six',
+          optionB:'five',
+          optionC:'four',
+          optionD:'one',
+          answer: 'six'
+      },{
+        quo:'one pluse one ?', 
+        optionA:'ten', 
+        optionB:'sevan',
+        optionC:'three',
+        optionD:'two',
+        answer: 'two'
+    },{
+        quo:'two pluse one ? ',
+         optionA:'sevan', 
+         optionB:'nine',
+         optionC:'one',
+         optionD:'three',
+         answer: 'three'
+     }
+     ]
+
+
+
+function myFunction(vla) {
+
+
+ var option=document.getElementsByName('option');
+  var it=document.getElementById('Question').value;
+ 
+var Question = document.getElementById('Question').value;
+var Add_Question = parseInt(Question)+1
+
+
+
+if (it==(hello.length-0)) { 
+
+  alert("quiz complite")
+}else{
+
+ var q= document.getElementById(vla).value ;
+ var q1= document.getElementById('answ').value ;
+
+ var an=(q1 == q)? 'Right' :'Wrong';
+ const node = document.createElement("div");
+const textnode = document.createTextNode(an);
+node.appendChild(textnode);
+document.getElementById("by").appendChild(node);
+
+
+var change = document.querySelector('input[name=option]:checked').value;
+document.querySelector('input[name="option"]:checked').checked= false;
+
+
+document.getElementById('Question').value=Add_Question;
+document.getElementById('hey').innerHTML=hello[Add_Question].quo;
+document.getElementById('option1').innerHTML=hello[Add_Question].optionA;
+document.getElementById('option2').innerHTML=hello[Add_Question].optionB;
+document.getElementById('option3').innerHTML=hello[Add_Question].optionC;
+document.getElementById('option4').innerHTML=hello[Add_Question].optionD;
+document.getElementById('option11').value=hello[Add_Question].optionA;
+document.getElementById('option22').value=hello[Add_Question].optionB;
+document.getElementById('option33').value=hello[Add_Question].optionC;
+document.getElementById('option44').value=hello[Add_Question].optionD;
+document.getElementById('answ').value=hello[Add_Question].answer;
+}
+}
+
+document.getElementById('hey').innerHTML=hello[0].quo;
+document.getElementById('option1').innerHTML=hello[0].optionA;
+document.getElementById('option2').innerHTML=hello[0].optionB;
+document.getElementById('option3').innerHTML=hello[0].optionC;
+document.getElementById('option4').innerHTML=hello[0].optionD;
+document.getElementById('option11').value=hello[0].optionA;
+document.getElementById('option22').value=hello[0].optionB;
+document.getElementById('option33').value=hello[0].optionC;
+document.getElementById('option44').value=hello[0].optionD;
+document.getElementById('answ').value=hello[0].answer;
+
+
+
+</script>
+
+</html>
