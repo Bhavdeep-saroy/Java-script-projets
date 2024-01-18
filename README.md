@@ -1,7 +1,9 @@
-Project Name : JavaScript
-project Author : Bhavdeep
+# Project Name : JavaScript
 
-Small details of the project -->
+
+## project Author : Bhavdeep
+
+### Details of the project -->
 
 1. Inside this project I have created a calculator function which helps in addition, subtraction and multiplication.
 
